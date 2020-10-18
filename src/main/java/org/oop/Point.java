@@ -24,4 +24,19 @@ public class Point {
         this.x = x;
         this.y = y;
     }
+
+    public double CalculateDistance(Point SecondPoint)
+    {
+        double xDistance = SecondPoint.getX() - this.x;
+        double yDistance = SecondPoint.getY() - this.y;
+        return Math.sqrt(Math.pow(xDistance, 2) + Math.pow(yDistance, 2));
+    }
+
+    public double CalculateDirection(Point SecondPoint)
+    {
+        double xDistance = SecondPoint.getX() - this.x;
+        double yDistance = SecondPoint.getY() - this.y;
+        return Math.atan2(yDistance, xDistance);
+    }
+
 }
